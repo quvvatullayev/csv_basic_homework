@@ -9,7 +9,7 @@ def find_number_of_rows(data):
     """
     x = csv.reader(data)
     sum = 1
-    for i in x:
+    for row in x:
         sum += 1
 
     return sum
