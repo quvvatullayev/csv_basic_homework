@@ -1,3 +1,4 @@
+import csv
 #Define function,Get coloumn names from a csv file
 def get_column_names(data):
     """ 
@@ -7,6 +8,17 @@ def get_column_names(data):
     Returns:
         column_names: list of column names
     """
-    return
+    data = csv.reader(data)
+    x = []
+    s = []
+    for i in data:
+        x.append(i)
+    for i in x[0]:
+        s.append(i)
+
+
+    return s
     
 # Read the csv file
+f = open("data.csv")
+print(get_column_names(f))
